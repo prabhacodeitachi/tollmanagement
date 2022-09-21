@@ -1,0 +1,37 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  #myInput{
+    margin-right: 50%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  tr:nth-child(even) {
+    background-color: #a2a6a6;
+  }
+
+  .btn {
+    background-color: white;
+    color: black;
+   
+  }
+  
+  .btn:hover {
+    background-color: #555555;
+    color: white;
+  }
+ 
+  a{
+    text-decoration: none;
+    color:black
+  }
+
+  .btn{
+    margin-right: 50px;
+}

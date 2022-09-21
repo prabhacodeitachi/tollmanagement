@@ -1,0 +1,86 @@
+
+
+<head>
+  <script src="https://kit.fontawesome.com/2f59a554ad.js" crossorigin="anonymous"></script>
+  <style>
+    @import  "/styles.css";
+  </style>
+</head>
+<body>
+    <h1 >Toll Management Application</h1>
+    <br>
+    <div>
+        <h2>Tollgate List</h2>
+     
+    <input type="text" id="tollsearchBox"  placeholder="Search vehicle" title="Type in a name">
+    <button class="btn"> Add Vehicle Entry</button>
+    <button class="btn"> Add New Toll</button>
+    <button class="btn"> <a href="/index.html">Back to Vehicle logs</a> </button> </button>
+    </div>
+    <br>
+   
+
+    <table id="tollsearch">
+      <tr>
+          <th >TOLL NAME</th>
+          <th>CAR/JEEP/VAN\</th>
+          <th>LCV</th>
+          <th>TRUCK/BUS</th>
+          <th>HEAVY VEHICLE</th>
+        </tr>
+        <tr>
+          <td>Chengalpattu</td>
+          <td>60/30</td>
+          <td>95/50</td>
+          <td>205/100</td>
+          <td>321/160</td>
+        </tr>
+        <tr>
+          <td>Ariyalur</td>
+          <td>60/30</td>
+          <td>95/50</td>
+          <td>205/100</td>
+          <td>321/160</td>
+          <tr>
+            <td>Papanasam</td>
+            <td>60/30</td>
+            <td>95/50</td>
+            <td>205/100</td>
+            <td>321/160</td>
+            <tr>
+              <td>pothaneri</td>
+              <td>60/30</td>
+              <td>95/50</td>
+              <td>205/100</td>
+              <td>321/160</td>
+          
+        
+        
+      </table>
+      
+ 
+      <script >
+        //tollpagesearch//
+
+var tollsearchBox = document.getElementById("tollsearchBox");
+tollsearchBox.addEventListener("keyup", function(){
+    var keyword = this.value;
+    keyword = keyword.toUpperCase();
+        var tollsearch = document.getElementById("tollsearch");
+        var all_tr = tollsearch.getElementsByTagName("tr");
+        for(var i=0; i<all_tr.length; i++){
+            var name_column = all_tr[i].getElementsByTagName("td")[0];
+            if(name_column){
+                var name_value = name_column.textContent || name_column.innerText;
+                name_value = name_value.toUpperCase();
+                if(name_value.indexOf(keyword) > -1){
+                    all_tr[i].style.display = ""; // show
+                }else{
+                    all_tr[i].style.display = "none"; // hide
+                }
+            }
+        }
+});
+      </script>
+</body>
+</html>
